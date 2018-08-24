@@ -1,0 +1,59 @@
+<br>
+<div class="row"> 
+    <div class="col">
+        <form id="form2" class="form" action="/kayitol" method="POST">
+            <div class="form-group  row">
+                <div class="col-1  col-sm-3 col-md-4"></div>
+                <div class="col-10 col-sm-6 col-md-4">
+                    <input id="usernameInput" type="text" class="form-control"  name="username" placeholder="username">
+                </div>
+                <div class="col-1  col-sm-3 col-md-4"></div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-1  col-sm-3 col-md-4"></div>
+                <div class="col-10 col-sm-6 col-md-4">
+                    <input id="SifreInput" type="text" class="form-control"  name="sifre" placeholder="Şifre">
+                </div>
+                <div class="col-1  col-sm-3 col-md-4"></div>
+            </div>
+            <div class="form-group row">
+                <div class="col-1  col-sm-3 col-md-4"></div>
+                <div class="col-10 col-sm-6 col-md-4">
+                    <input id="SifreInput" type="text" class="form-control"  name="sifre2" placeholder="Şifre2">
+                </div>
+                <div class="col-1  col-sm-3 col-md-4"></div>
+            </div>
+            <div class="form-group row">
+                <div class="col-1  col-sm-3 col-md-4"></div>
+                <div class="col-10 col-sm-6 col-md-4">
+                    <input id="emailInput" type="text" class="form-control"  name="email" placeholder="email">
+                </div>
+                <div class="col-1  col-sm-3 col-md-4"></div>
+            </div>
+            <div class="form-group row">
+                <div class="col-1  col-sm-3 col-md-4"></div>
+                <div class="col-10 col-sm-6 col-md-4">
+                    <button class="btn btn-success" type="submit">KayitOl</button>
+                </div>
+                <div class="col-1  col-sm-3 col-md-4"></div>
+            </div>
+
+            <!-- Hata Kodları buraya yazdırılacak-->
+            <div class="form-group row">
+                <div class="col-1  col-sm-3 col-md-4"></div>
+                <div class="col-10 col-sm-6 col-md-4 bg-warning">
+                    <% if(typeof hatalar !== 'undefined'){%>
+                        <a><span class="badge badge-danger">Hata Var! </span></a>
+                        <ul>
+                        <% hatalar.forEach(function(hatalar) { %>
+                            <li><a class="text-danger"><%= hatalar.msg %></a></li>
+                        <% }); %>
+                        </ul>
+                    <% }%>
+                </div>
+                <div class="col-1  col-sm-3 col-md-4"></div>
+            </div>
+        </form>
+    </div>
+</div> 

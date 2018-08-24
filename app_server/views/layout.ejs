@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Autontication</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="shortcut icon" href="/img/logo.png" />   
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        
+        <a class="navbar-brand" href="/"><img src="/img/logo.png"/>Autontication</a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Anasayfa <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled"  data-toggle="modal" data-target="#Hakkimizda">Hakkimizda</a>
+            </li>
+          </ul>
+          
+        
+          <!-- Programın Kodlanışına Göre Burası ya kaldırılacak, yada  if else yapısıyla kontrol edilecek. -->
+          <form class="form-inline my-2 my-lg-0">
+            <% if(user){%>
+              <a class="btn btn-primary my-2 my-sm-0" type="submit" href="/user">Profil</a>
+              <a class="btn btn-danger my-2 my-sm-0" type="submit" href="/cikis">Çıkış</a>
+            <% } else{ %>
+              <a class="btn btn-primary my-2 my-sm-0" type="submit" href="/giris">Giriş</a>
+              <a class="btn btn-success my-2 my-sm-0" type="submit" href="/kayitol">Kayıt Ol</a>
+            <% } %>
+          </form>
+          
+        </div>
+      </nav>
+    <%- body %>
+
+
+  <script type="application/javascript" src="/js/jquery-3.3.1.min.js"></script>
+  <script type="application/javascript" src="/js/jquery-1.10.2.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/jquery.cookie.js"></script>  
+  <script type='text/javascript' src="/js/main.js"></script>
+</body>
+</html>
